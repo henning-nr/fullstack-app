@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Meu CRUD Alunos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOME</th>
+                <th>IDADE</th>
+                <th>SEXO</th>
+            </tr>
+        </thead>
+
+        <tbody>
+           
+        </tbody>
+    </table>
+</body>
+</html>
+
+<script>
+    function listarAlunos(){
+        fetch("https://curly-space-chainsaw-p4v44r9rx65f6jr6-3000.app.github.dev/alunos")
+        .then((dados)=>{return dados.json()})
+        .then((alunos)=>{
+            console.log("lista de alunos",alunos)
+            document.querySelector("tbody").innerHTML = 
+            `
+             <tr>
+                <td>${alunos[0].id}</td>
+                <td>${alunos[0].nome}</td>
+                <td>${alunos[0].idade}</td>
+                <td>${alunos[0].sexo}</td>
+            </tr>
+            `
+        })
+    }
+
+    listarAlunos()
+</script>

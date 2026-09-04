@@ -1,0 +1,30 @@
+{
+  "alunos": [
+    {
+      "nome": "Henning Summer",
+      "idade": "34",
+      "sexo": "Outros",
+      "id": 1
+    },
+    {
+      "nome": "Pedro",
+      "idade": "42",
+      "sexo": "Masculino",
+      "id": 2
+    }
+  ],
+  "disciplinas": [
+    {
+      "nome": "Fullstack",
+      "curso": "ADS",
+      "periodo": "3o",
+      "id": 1
+    },
+    {
+      "nome": "Cloud e Webservices",
+      "curso": "ADS",
+      "periodo": "3o",
+      "id": 2
+    }
+  ]
+}

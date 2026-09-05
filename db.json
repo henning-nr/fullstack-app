@@ -11,6 +11,54 @@
       "idade": "42",
       "sexo": "Masculino",
       "id": 2
+    },
+    {
+      "nome": "Amaro",
+      "idade": "45",
+      "sexo": "Masculino",
+      "id": 3
+    },
+    {
+      "nome": "Sicrano",
+      "idade": "47",
+      "sexo": "Masculino",
+      "id": 4
+    },
+    {
+      "nome": "oioioioioioii",
+      "idade": "222",
+      "sexo": "masculino",
+      "id": 5
+    },
+    {
+      "nome": "Henning Summer",
+      "idade": "44",
+      "sexo": "Outros",
+      "id": 6
+    },
+    {
+      "nome": "Henning Summer",
+      "idade": "44",
+      "sexo": "Outros",
+      "id": 7
+    },
+    {
+      "nome": "Abigail",
+      "idade": "44",
+      "sexo": "Feminino",
+      "id": 8
+    },
+    {
+      "nome": "Mariana Melo",
+      "idade": "21",
+      "sexo": "Feminino",
+      "id": 9
+    },
+    {
+      "nome": "Olavo Lima",
+      "idade": "11",
+      "sexo": "masculino",
+      "id": 10
     }
   ],
   "disciplinas": [
@@ -26,5 +74,6 @@
       "periodo": "3o",
       "id": 2
     }
-  ]
+  ],
+  "cursos": []
 }

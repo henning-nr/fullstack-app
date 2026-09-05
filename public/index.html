@@ -1,46 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
+
 <body>
-    <h1>Meu CRUD Alunos</h1>
+
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+
+  <div id="table-aluno" class="container">
+    <h3>Lista CRUD Alunos</h3>
+    <button onclick="mostrarForm()" class="btn waves-effect waves-light" type="submit" name="action">Novo
+      <i class="material-icons right">add</i>
+    </button>
     <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NOME</th>
-                <th>IDADE</th>
-                <th>SEXO</th>
-            </tr>
-        </thead>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>NOME</th>
+          <th>IDADE</th>
+          <th>SEXO</th>
+        </tr>
+      </thead>
 
-        <tbody>
-           
-        </tbody>
+      <tbody>
+
+      </tbody>
     </table>
+  </div>
+
+
+  <div id="form-aluno" class="row">
+    <div class="container">
+      <h3>Cadastro de Alunos</h3>
+      <form class="col s12">
+        <div class="row">
+          <!-- campo nome -->
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="nome" type="text" class="validate">
+            <label for="nome">Nome</label>
+          </div>
+          <!-- campo idade -->
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="idade" type="text" class="validate">
+            <label for="idade">Idade</label>
+          </div>
+          <!-- campo sexo -->
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="sexo" type="text" class="validate">
+            <label for="sexo">Sexo</label>
+          </div>
+
+        </div>
+        <button onclick="salvarAluno()" class="btn waves-effect waves-light" type="button" name="action">Salvar
+          <i class="material-icons right">send</i>
+        </button>
+        <button onclick="ocultarForm()" class="btn waves-effect waves-light pink darken-1" type="button" name="action">Voltar
+          <i class="material-icons right">arrow_back</i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-copyright">
+    <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Henning Summer</a>
+    </div>
+  </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/services-alunos/alunos.js"></script>
+
 </body>
+
 </html>
-
-<script>
-    function listarAlunos(){
-        fetch("https://curly-space-chainsaw-p4v44r9rx65f6jr6-3000.app.github.dev/alunos")
-        .then((dados)=>{return dados.json()})
-        .then((alunos)=>{
-            console.log("lista de alunos",alunos)
-            document.querySelector("tbody").innerHTML = 
-            `
-             <tr>
-                <td>${alunos[0].id}</td>
-                <td>${alunos[0].nome}</td>
-                <td>${alunos[0].idade}</td>
-                <td>${alunos[0].sexo}</td>
-            </tr>
-            `
-        })
-    }
-
-    listarAlunos()
-</script>
